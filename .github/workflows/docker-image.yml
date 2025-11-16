@@ -32,7 +32,7 @@ jobs:
           context: ./HospitalManagemnet
           file: ./HospitalManagemnet/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/docker-backend-end:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/k8-backend-end:latest
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -41,4 +41,4 @@ jobs:
           context: ./Hospital-Frontend
           file: ./Hospital-Frontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/docker-frontend-end:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/k8-frontend-end:latest
